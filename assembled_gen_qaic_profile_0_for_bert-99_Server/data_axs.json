@@ -1,0 +1,46 @@
+{
+    "sut": "gen_qaic_profile",
+    "model": "bert-99",
+    "loadgen_scenario": "Server",
+    "num_device": 1,
+    "system": null,
+    "with_power": false,
+    "power_server_address": null,
+    "power_server_port": null,
+    "gen_profile_config_only": true,
+    "device_id": "all",
+    "__query": "sut_config,sut=gen_qaic_profile,model=bert-99,loadgen_scenario=Server",
+    "tags": [
+        "sut_config",
+        "sut=gen_qaic_profile"
+    ],
+    "_replay": [
+        "^^",
+        "execute",
+        [
+            [
+                [
+                    "get_kernel"
+                ],
+                [
+                    "byname",
+                    "gen_qaic_profile"
+                ],
+                [
+                    "merge"
+                ]
+            ]
+        ]
+    ],
+    "config_compiletime_profile": {
+        "aic_hw": "",
+        "aic_hw_version": "2.0",
+        "device_id": "0",
+        "num_histogram_bins": 512,
+        "onnx_define_symbol": {
+            "batch_size": 1,
+            "seg_length": 384
+        }
+    },
+    "release": true
+}

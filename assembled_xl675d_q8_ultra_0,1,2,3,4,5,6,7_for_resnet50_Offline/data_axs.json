@@ -1,0 +1,93 @@
+{
+    "sut": "xl675d_q8_ultra",
+    "model": "resnet50",
+    "loadgen_scenario": "Offline",
+    "num_device": 8,
+    "with_power": false,
+    "power_server_address": null,
+    "power_server_port": null,
+    "gen_profile_config_only": false,
+    "device_id": "all",
+    "__query": "sut_config,sut=xl675d_q8_ultra,model=resnet50,loadgen_scenario=Offline",
+    "tags": [
+        "sut_config",
+        "sut=xl675d_q8_ultra"
+    ],
+    "_replay": [
+        "^^",
+        "execute",
+        [
+            [
+                [
+                    "get_kernel"
+                ],
+                [
+                    "byname",
+                    "xl675d_q8_ultra"
+                ],
+                [
+                    "merge"
+                ]
+            ]
+        ]
+    ],
+    "config_compiletime_profile": {
+        "aic_hw": "",
+        "aic_hw_version": "2.0",
+        "device_id": "0",
+        "num_histogram_bins": 512,
+        "onnx_define_symbol": {
+            "batch_size": 1,
+            "seg_length": 384
+        },
+        "profiling_thread": 8
+    },
+    "config_compiletime_model": {
+        "aic_hw": "",
+        "aic_hw_version": "2.0",
+        "batchSize": 8,
+        "compile_only": "",
+        "cores": "4",
+        "device_id": "0",
+        "execute_nodes_in_fp16": "Add,Div,Erf,Softmax",
+        "mos": "1,2",
+        "multicast_weights": "",
+        "ols": "4",
+        "onnx_define_symbol": {
+            "batch_size": 1,
+            "seg_length": 384
+        },
+        "percentile_calibration_value": 99.998,
+        "quantization_calibration": "Percentile",
+        "quantization_precision": "Int8",
+        "quantization_precision_bias": "Int32",
+        "quantization_schema_activations": "symmetric_with_uint8",
+        "quantization_schema_constants": "symmetric_with_uint8",
+        "sdp-cluster-sizes": "2,2",
+        "size-split-granularity": "1536",
+        "vtcm_working_set_limit_ratio": 1,
+        "vvv": ""
+    },
+    "_parent_entries": [
+        [
+            "^",
+            "byname",
+            "base_system"
+        ]
+    ],
+    "release": true,
+    "config_runtime": {
+        "device_id": "0,1,2,3,4,5,6,7",
+        "loadgen_batch_size": 8,
+        "loadgen_buffer_size": 1024,
+        "loadgen_target_qps": 1,
+        "model_input_format": "UINT32,1,384:UINT32,1,8:UINT32,1,384:UINT32,1,384",
+        "model_output_format": "FLOAT32,1,384:FLOAT32,1,384",
+        "recommended_activation_count": 3,
+        "recommended_max_wait_abs": 1800,
+        "recommended_queue_length": 3,
+        "recommended_threads_per_queue": 2,
+        "vc": 2
+    },
+    "system": null
+}
