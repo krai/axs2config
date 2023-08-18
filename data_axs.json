@@ -1,0 +1,22 @@
+{
+    "_parent_entries": [
+        [
+            "^",
+            "core_collection"
+        ],
+        [
+            "^",
+            "byname",
+            "git"
+        ]
+    ],
+    "tags": [
+        "git_repo",
+        "collection"
+    ],
+    "repo_name": "axs2config",
+    "submodules": false,
+    "checkout": "main",
+    "contained_entries": {
+    }
+}
