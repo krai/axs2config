@@ -1,0 +1,173 @@
+{
+    "sut": "dl385_q8_std",
+    "model": "bert-99.9",
+    "model_config_entry": [
+        "^",
+        "byname",
+        "bert-99.9"
+    ],
+    "model_compiletime_device_model_entry": [
+        "^",
+        "byname",
+        "compile_model_bert-99.9_q1_std_dc"
+    ],
+    "runtime_device_model_entry": [
+        "^",
+        "byname",
+        "run_bert-99.9_q8_std_dc"
+    ],
+    "loadgen_scenario": "Offline",
+    "num_device": 8,
+    "system": "HPE_ProLiant_DL385_Gen10_Plus_v2",
+    "with_power": false,
+    "power_server_address": null,
+    "power_server_port": null,
+    "power_max_amps": null,
+    "power_max_volts": null,
+    "profile_compiletime_device_model_entry": null,
+    "override_runtime_config": {
+        "resnet50": {
+            "Offline": {
+                "recommended_threads_per_queue": 2,
+                "recommended_max_wait_abs": 1800,
+                "recommended_queue_length": 3,
+                "loadgen_target_qps": 158000,
+                "vc": 16
+            },
+            "Server": {
+                "kilt_datasource_config": "0:64",
+                "kilt_device_config": "0,0,1,2,3:0,4,5,6,7:0,8,9,10,11:0,12,13,14,15:1,64,65,66,67:1,68,69,70,71:1,72,73,74,75:1,76,77,78,79",
+                "recommended_threads_per_queue": 2,
+                "recommended_queue_length": 3,
+                "loadgen_target_qps": 156000,
+                "vc": 16
+            }
+        },
+        "retinanet": {
+            "Offline": {
+                "recommended_threads_per_queue": 2,
+                "recommended_queue_length": 2,
+                "loadgen_target_qps": 2300,
+                "vc": 17
+            },
+            "Server": {
+                "kilt_datasource_config": "0:64",
+                "kilt_device_config": "0,0,1,2,3:0,4,5,6,7:0,8,9,10,11:0,12,13,14,15:1,64,65,66,67:1,68,69,70,71:1,72,73,74,75:1,76,77,78,79",
+                "recommended_threads_per_queue": 2,
+                "recommended_queue_length": 2,
+                "loadgen_target_qps": 2227,
+                "vc": 17
+            }
+        },
+        "bert-99": {
+            "Offline": {
+                "recommended_batch_size": 4096,
+                "TODO: recommended_threads_per_queue": 2,
+                "TODO: recommended_queue_length": 2,
+                "loadgen_target_qps": 5850,
+                "vc": 15
+            },
+            "Server": {
+                "recommended_batch_size": 200,
+                "kilt_datasource_config": "0:64",
+                "kilt_device_config": "0,0,1,2,3:0,4,5,6,7:0,8,9,10,11:0,12,13,14,15:1,64,65,66,67:1,68,69,70,71:1,72,73,74,75:1,76,77,78,79",
+                "TODO: recommended_threads_per_queue": 2,
+                "TODO: recommended_queue_length": 2,
+                "loadgen_target_qps": 5475,
+                "vc": 15
+            }
+        },
+        "bert-99.9": {
+            "Offline": {
+                "recommended_batch_size": 1000,
+                "kilt_datasource_config": "0:64",
+                "kilt_device_config": "0,0,1,2,3:0,4,5,6,7:0,8,9,10,11:0,12,13,14,15:1,64,65,66,67:1,68,69,70,71:1,72,73,74,75:1,76,77,78,79",
+                "TODO: recommended_threads_per_queue": 2,
+                "TODO: recommended_queue_length": 2,
+                "loadgen_target_qps": 2900,
+                "vc": 13
+            },
+            "Server": {
+                "recommended_batch_size": 100,
+                "kilt_datasource_config": "0:64",
+                "kilt_device_config": "0,0,1,2,3:0,4,5,6,7:0,8,9,10,11:0,12,13,14,15:1,64,65,66,67:1,68,69,70,71:1,72,73,74,75:1,76,77,78,79",
+                "TODO: recommended_threads_per_queue": 2,
+                "TODO: recommended_queue_length": 2,
+                "loadgen_target_qps": 2725,
+                "vc": 13
+            }
+        }
+    },
+    "gen_profile_config_only": false,
+    "device_id": "all",
+    "cpu_entry": null,
+    "system_entry": null,
+    "__cumulative_param_names": [
+        "__query",
+        "sut",
+        "model",
+        "loadgen_scenario",
+        "tags"
+    ],
+    "__query": "sut_config,sut=dl385_q8_std,model=bert-99.9,loadgen_scenario=Offline",
+    "tags": [
+        "sut_config",
+        "sut=dl385_q8_std"
+    ],
+    "_replay": [
+        "^^",
+        "execute",
+        [
+            [
+                [
+                    "get_kernel"
+                ],
+                [
+                    "byname",
+                    "dl385_q8_std"
+                ],
+                [
+                    "merge"
+                ]
+            ]
+        ]
+    ],
+    "config_compiletime_model": {
+        "aic_hw": "",
+        "aic_hw_version": "2.0",
+        "compile_only": "",
+        "convert-to-fp16": "",
+        "cores": "2",
+        "deallocDelay": "3",
+        "device_id": "0",
+        "mos": "1",
+        "multicast_weights": "",
+        "ols": "2",
+        "onnx_define_symbol": {
+            "batch_size": 1,
+            "seg_length": 448
+        }
+    },
+    "config_runtime": {
+        "TODO: recommended_queue_length": 2,
+        "TODO: recommended_threads_per_queue": 2,
+        "device_id": "0,1,2,3,4,5,6,7",
+        "kilt_datasource_config": "0:64",
+        "kilt_device_config": "0,0,1,2,3:0,4,5,6,7:0,8,9,10,11:0,12,13,14,15:1,64,65,66,67:1,68,69,70,71:1,72,73,74,75:1,76,77,78,79",
+        "loadgen_buffer_size": 10833,
+        "loadgen_target_qps": 2900,
+        "model_input_format": "UINT64,1,448:UINT64,1,8:UINT64,1,448:UINT64,1,448",
+        "model_output_format": "FLOAT32,1,448:FLOAT32,1,448",
+        "recommended_activation_count": 7,
+        "recommended_batch_size": 1000,
+        "recommended_max_wait_abs": null,
+        "vc": 13
+    },
+    "_parent_entries": [
+        [
+            "^",
+            "byname",
+            "HPE_ProLiant_DL385_Gen10_Plus_v2"
+        ]
+    ]
+}

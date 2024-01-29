@@ -1,0 +1,78 @@
+{
+    "sut": "sr665_q5_pro",
+    "model": "bert-99.9",
+    "loadgen_scenario": "Server",
+    "num_device": 5,
+    "with_power": false,
+    "power_server_address": null,
+    "power_server_port": null,
+    "gen_profile_config_only": false,
+    "device_id": "all",
+    "__query": "sut_config,sut=sr665_q5_pro,model=bert-99.9,loadgen_scenario=Server",
+    "tags": [
+        "sut_config",
+        "sut=sr665_q5_pro"
+    ],
+    "_replay": [
+        "^^",
+        "execute",
+        [
+            [
+                [
+                    "get_kernel"
+                ],
+                [
+                    "byname",
+                    "sr665_q5_pro"
+                ],
+                [
+                    "merge"
+                ]
+            ]
+        ]
+    ],
+    "config_compiletime_model": {
+        "aic_hw": "",
+        "aic_hw_version": "2.0",
+        "compile_only": "",
+        "cores": "4",
+        "device_id": "0",
+        "execute_nodes_in_fp16": "Add,Div,Erf,Softmax",
+        "mos": "4",
+        "multicast_weights": "",
+        "ols": "1",
+        "onnx_define_symbol": {
+            "batch_size": 1,
+            "seg_length": 384
+        },
+        "percentile_calibration_value": 99.998,
+        "quantization_calibration": "Percentile",
+        "quantization_precision": "Int8",
+        "quantization_precision_bias": "Int32",
+        "quantization_schema_activations": "symmetric_with_uint8",
+        "quantization_schema_constants": "symmetric_with_uint8",
+        "size-split-granularity": "1536",
+        "vtcm_working_set_limit_ratio": 1,
+        "vvv": ""
+    },
+    "_parent_entries": [
+        [
+            "^",
+            "byname",
+            "base_system"
+        ]
+    ],
+    "release": true,
+    "config_runtime": {
+        "device_id": "0,1,2,3,4",
+        "loadgen_buffer_size": 10833,
+        "loadgen_target_qps": 1,
+        "model_input_format": "UINT32,1,384:UINT32,1,8:UINT32,1,384:UINT32,1,384",
+        "model_output_format": "FLOAT32,1,384:FLOAT32,1,384",
+        "recommended_activation_count": 4,
+        "recommended_batch_size": 500,
+        "recommended_max_wait_abs": 50000,
+        "vc": 13
+    },
+    "system": null
+}

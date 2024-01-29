@@ -1,0 +1,96 @@
+{
+    "sut": "dl385_q8_std",
+    "model": "bert-99",
+    "loadgen_scenario": "Server",
+    "num_device": 8,
+    "with_power": false,
+    "power_server_address": null,
+    "power_server_port": null,
+    "gen_profile_config_only": false,
+    "device_id": "all",
+    "__query": "sut_config,sut=dl385_q8_std,model=bert-99,loadgen_scenario=Server",
+    "tags": [
+        "sut_config",
+        "sut=dl385_q8_std"
+    ],
+    "_replay": [
+        "^^",
+        "execute",
+        [
+            [
+                [
+                    "get_kernel"
+                ],
+                [
+                    "byname",
+                    "dl385_q8_std"
+                ],
+                [
+                    "merge"
+                ]
+            ]
+        ]
+    ],
+    "config_compiletime_profile": {
+        "aic_hw": "",
+        "aic_hw_version": "2.0",
+        "device_id": "0",
+        "num_histogram_bins": 512,
+        "onnx_define_symbol": {
+            "batch_size": 1,
+            "seg_length": 384
+        },
+        "profiling_thread": 24
+    },
+    "config_compiletime_model": {
+        "aic_hw": "",
+        "aic_hw_version": "2.0",
+        "compile_only": "",
+        "cores": "1",
+        "deallocDelay": "3",
+        "device_id": "0",
+        "execute_nodes_in_fp16": "Add,Div,Erf,Softmax",
+        "mos": "1",
+        "multicast_weights": "",
+        "ols": "2",
+        "onnx_define_symbol": {
+            "batch_size": 1,
+            "seg_length": 384
+        },
+        "percentile_calibration_value": 99.9977,
+        "profiling_thread": 24,
+        "quantization_calibration": "Percentile",
+        "quantization_precision": "Int8",
+        "quantization_precision_bias": "Int32",
+        "quantization_schema_activations": "symmetric_with_uint8",
+        "quantization_schema_constants": "symmetric_with_uint8",
+        "size-split-granularity": "1536",
+        "size_split_granularity": "1536",
+        "vtcm_working_set_limit_ratio": "1",
+        "vvv": ""
+    },
+    "_parent_entries": [
+        [
+            "^",
+            "byname",
+            "base_system"
+        ]
+    ],
+    "release": true,
+    "config_runtime": {
+        "TODO: recommended_queue_length": 2,
+        "TODO: recommended_threads_per_queue": 2,
+        "device_id": "0,1,2,3,4,5,6,7",
+        "kilt_datasource_config": "0:64",
+        "kilt_device_config": "0,0,1,2,3:0,4,5,6,7:0,8,9,10,11:0,12,13,14,15:1,64,65,66,67:1,68,69,70,71:1,72,73,74,75:1,76,77,78,79",
+        "loadgen_buffer_size": 10833,
+        "loadgen_target_qps": 1,
+        "model_input_format": "UINT32,1,384:UINT32,1,8:UINT32,1,384:UINT32,1,384",
+        "model_output_format": "FLOAT32,1,384:FLOAT32,1,384",
+        "recommended_activation_count": 14,
+        "recommended_batch_size": 200,
+        "recommended_max_wait_abs": null,
+        "vc": 15
+    },
+    "system": null
+}

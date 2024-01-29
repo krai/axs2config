@@ -1,0 +1,111 @@
+{
+    "sut": "sr665_q5_pro",
+    "model": "retinanet",
+    "model_config_entry": [
+        "^",
+        "byname",
+        "retinanet"
+    ],
+    "model_compiletime_device_model_entry": [
+        "^",
+        "byname",
+        "compile_model_retinanet_q1_pro_dc"
+    ],
+    "runtime_device_model_entry": [
+        "^",
+        "byname",
+        "run_retinanet_q5_pro_dc"
+    ],
+    "loadgen_scenario": "Server",
+    "num_device": 5,
+    "system": "Lenovo_ThinkSystem_SR665",
+    "with_power": false,
+    "power_server_address": null,
+    "power_server_port": null,
+    "power_max_amps": null,
+    "power_max_volts": null,
+    "profile_compiletime_device_model_entry": [
+        "^",
+        "byname",
+        "compile_profile_retinanet_q1_pro_dc"
+    ],
+    "override_runtime_config": null,
+    "gen_profile_config_only": false,
+    "device_id": "all",
+    "cpu_entry": null,
+    "system_entry": null,
+    "__cumulative_param_names": [
+        "__query",
+        "sut",
+        "model",
+        "loadgen_scenario",
+        "tags"
+    ],
+    "__query": "sut_config,sut=sr665_q5_pro,model=retinanet,loadgen_scenario=Server",
+    "tags": [
+        "sut_config",
+        "sut=sr665_q5_pro"
+    ],
+    "_replay": [
+        "^^",
+        "execute",
+        [
+            [
+                [
+                    "get_kernel"
+                ],
+                [
+                    "byname",
+                    "sr665_q5_pro"
+                ],
+                [
+                    "merge"
+                ]
+            ]
+        ]
+    ],
+    "config_compiletime_profile": {
+        "device_id": "0",
+        "enable-channelwise": "",
+        "onnx_define_symbol": {
+            "batch_size": 1
+        },
+        "profiling_thread": 32
+    },
+    "config_compiletime_model": {
+        "aic-enable-depth-first": "",
+        "aic_hw": "",
+        "aic_hw_version": "2.0",
+        "batchSize": 1,
+        "compile_only": "",
+        "cores": "1",
+        "device_id": "0",
+        "enable-channelwise": "",
+        "mos": "1",
+        "ols": "1",
+        "onnx_define_symbol": {
+            "batch_size": 1
+        },
+        "profiling_thread": 32,
+        "quantization-calibration": "None",
+        "quantization_schema_activations": "asymmetric",
+        "quantization_schema_constants": "symmetric_with_uint8",
+        "vvv": ""
+    },
+    "config_runtime": {
+        "device_id": "0,1,2,3,4",
+        "loadgen_target_qps": 1386,
+        "model_input_format": "UINT8,1,800,800",
+        "model_output_format": "FLOAT32,1,1:FLOAT32,1,1:FLOAT32,1,1:FLOAT32,1,1:FLOAT32,1,1:FLOAT32,1,1:FLOAT32,1,1:FLOAT32,1,1:FLOAT32,1,1:FLOAT32,1,1:FLOAT32,1,1:FLOAT32,1,1:FLOAT32,1,1:FLOAT32,1,1:FLOAT32,1,1",
+        "recommended_activation_count": 16,
+        "recommended_max_wait_abs": null,
+        "vc": 17
+    },
+    "_parent_entries": [
+        [
+            "^",
+            "byname",
+            "Lenovo_ThinkSystem_SR665"
+        ]
+    ]
+}

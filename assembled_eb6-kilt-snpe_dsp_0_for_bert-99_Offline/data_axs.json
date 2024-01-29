@@ -1,0 +1,126 @@
+{
+    "sut": "eb6-kilt-snpe_dsp",
+    "model": "bert-99",
+    "model_config_entry": [
+        "^",
+        "byname",
+        "bert-99"
+    ],
+    "model_compiletime_device_model_entry": [
+        "^",
+        "byname",
+        "compile_model_bert-99_q1_pro_edge"
+    ],
+    "runtime_device_model_entry": [
+        "^",
+        "byname",
+        "run_bert-99_q1_pro_edge"
+    ],
+    "loadgen_scenario": "Offline",
+    "num_device": 1,
+    "system": "Thundercomm TurboX EB6 Edge AI Box",
+    "with_power": true,
+    "power_server_address": "192.168.4.3",
+    "power_server_port": 4949,
+    "power_max_amps": 0.5,
+    "power_max_volts": 300,
+    "profile_compiletime_device_model_entry": [
+        "^",
+        "byname",
+        "compile_profile_bert-99_q1_pro_edge"
+    ],
+    "override_runtime_config": null,
+    "gen_profile_config_only": false,
+    "device_id": "all",
+    "cpu_entry": null,
+    "system_entry": null,
+    "__cumulative_param_names": [
+        "__query",
+        "sut",
+        "model",
+        "loadgen_scenario",
+        "tags"
+    ],
+    "__query": "sut_config,sut=eb6-kilt-snpe_dsp,model=bert-99,loadgen_scenario=Offline",
+    "tags": [
+        "sut_config",
+        "sut=eb6-kilt-snpe_dsp"
+    ],
+    "_replay": [
+        "^^",
+        "execute",
+        [
+            [
+                [
+                    "get_kernel"
+                ],
+                [
+                    "byname",
+                    "eb6-kilt-snpe_dsp"
+                ],
+                [
+                    "merge"
+                ]
+            ]
+        ]
+    ],
+    "config_compiletime_profile": {
+        "aic_hw": "",
+        "aic_hw_version": "2.0",
+        "device_id": "0",
+        "num_histogram_bins": 512,
+        "onnx_define_symbol": {
+            "batch_size": 1,
+            "seg_length": 384
+        },
+        "profiling_thread": 8
+    },
+    "config_compiletime_model": {
+        "aic_hw": "",
+        "aic_hw_version": "2.0",
+        "compile_only": "",
+        "cores": "1",
+        "deallocDelay": "3",
+        "device_id": "0",
+        "execute_nodes_in_fp16": "Add,Div,Erf,Softmax",
+        "mos": "1",
+        "multicast_weights": "",
+        "ols": "2",
+        "onnx_define_symbol": {
+            "batch_size": 1,
+            "seg_length": 384
+        },
+        "percentile_calibration_value": 99.9977,
+        "profiling_thread": 8,
+        "quantization_calibration": "Percentile",
+        "quantization_precision": "Int8",
+        "quantization_precision_bias": "Int32",
+        "quantization_schema_activations": "symmetric_with_uint8",
+        "quantization_schema_constants": "symmetric_with_uint8",
+        "size-split-granularity": "1536",
+        "vtcm_working_set_limit_ratio": 1,
+        "vvv": ""
+    },
+    "config_runtime": {
+        "ERROR": "This config is empty at /home/saheli/work_collection/axs2qaic-dev/config_for_model_and_device_runtime_collection/run_bert-99_q1_pro_edge",
+        "device_id": "0",
+        "loadgen_buffer_size": 10833,
+        "loadgen_target_qps": 1,
+        "model_input_format": "UINT32,1,384:UINT32,1,8:UINT32,1,384:UINT32,1,384",
+        "model_output_format": "FLOAT32,1,384:FLOAT32,1,384",
+        "power_max_amps": 0.5,
+        "power_max_volts": 300,
+        "power_server_address": "192.168.4.3",
+        "power_server_port": 4949,
+        "recommended_activation_count": 16,
+        "recommended_max_wait_abs": null,
+        "vc": 16
+    },
+    "_parent_entries": [
+        [
+            "^",
+            "byname",
+            "base_system"
+        ]
+    ]
+}

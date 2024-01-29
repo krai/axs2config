@@ -1,0 +1,108 @@
+{
+    "sut": "sr665_q5_pro",
+    "model": "resnet50",
+    "model_config_entry": [
+        "^",
+        "byname",
+        "resnet50"
+    ],
+    "model_compiletime_device_model_entry": [
+        "^",
+        "byname",
+        "compile_model_resnet50_q1_pro_dc"
+    ],
+    "runtime_device_model_entry": [
+        "^",
+        "byname",
+        "run_resnet50_q5_pro_dc"
+    ],
+    "loadgen_scenario": "Offline",
+    "num_device": 5,
+    "system": "Lenovo_ThinkSystem_SR665",
+    "with_power": false,
+    "power_server_address": null,
+    "power_server_port": null,
+    "power_max_amps": null,
+    "power_max_volts": null,
+    "profile_compiletime_device_model_entry": [
+        "^",
+        "byname",
+        "compile_profile_resnet50_q1_pro_dc"
+    ],
+    "override_runtime_config": null,
+    "gen_profile_config_only": false,
+    "device_id": "all",
+    "cpu_entry": null,
+    "system_entry": null,
+    "__query": "sut_config,sut=sr665_q5_pro,model=resnet50,loadgen_scenario=Offline",
+    "__cumulative_param_names": [
+        "__query",
+        "sut",
+        "model",
+        "loadgen_scenario",
+        "tags"
+    ],
+    "tags": [
+        "sut_config",
+        "sut=sr665_q5_pro"
+    ],
+    "_replay": [
+        "^^",
+        "execute",
+        [
+            [
+                [
+                    "get_kernel"
+                ],
+                [
+                    "byname",
+                    "sr665_q5_pro"
+                ],
+                [
+                    "merge"
+                ]
+            ]
+        ]
+    ],
+    "config_compiletime_profile": {
+        "device_id": "0",
+        "output-node-name": "ArgMax",
+        "profiling_thread": 8
+    },
+    "config_compiletime_model": {
+        "aic_hw": "",
+        "aic_hw_version": "2.0",
+        "batchSize": 8,
+        "compile_only": "",
+        "cores": "4",
+        "device_id": "0",
+        "enable-channelwise": "",
+        "mos": "1,2",
+        "ols": "4",
+        "output-node-name": "ArgMax",
+        "quantization-schema-constants": "symmetric_with_uint8",
+        "quantization_precision": "Int8",
+        "quantization_schema_activations": "symmetric_with_uint8",
+        "sdp-cluster-sizes": "2,2",
+        "use-producer-dma": "1",
+        "vvv": ""
+    },
+    "config_runtime": {
+        "device_id": "0,1,2,3,4",
+        "loadgen_batch_size": 8,
+        "loadgen_buffer_size": 1024,
+        "loadgen_target_qps": 116015,
+        "model_input_format": "UINT8,1,224,224,3",
+        "model_output_format": "INT64,1",
+        "recommended_activation_count": 4,
+        "recommended_max_wait_abs": 100,
+        "vc": 16
+    },
+    "_parent_entries": [
+        [
+            "^",
+            "byname",
+            "Lenovo_ThinkSystem_SR665"
+        ]
+    ]
+}

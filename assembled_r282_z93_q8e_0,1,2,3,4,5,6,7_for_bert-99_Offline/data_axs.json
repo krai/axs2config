@@ -1,0 +1,101 @@
+{
+    "sut": "r282_z93_q8e",
+    "model": "bert-99",
+    "loadgen_scenario": "Offline",
+    "num_device": 8,
+    "system": "GIGABYTE_R282-Z93",
+    "with_power": true,
+    "power_server_address": "10.222.146.209",
+    "power_server_port": 4957,
+    "gen_profile_config_only": false,
+    "device_id": "all",
+    "__query": "sut_config,sut=r282_z93_q8e,model=bert-99,loadgen_scenario=Offline",
+    "tags": [
+        "sut_config",
+        "sut=r282_z93_q8e"
+    ],
+    "_replay": [
+        "^^",
+        "execute",
+        [
+            [
+                [
+                    "get_kernel"
+                ],
+                [
+                    "byname",
+                    "r282_z93_q8e"
+                ],
+                [
+                    "merge"
+                ]
+            ]
+        ]
+    ],
+    "config_compiletime_profile": {
+        "aic_hw": "",
+        "aic_hw_version": "2.0",
+        "device_id": "0",
+        "num_histogram_bins": 512,
+        "onnx_define_symbol": {
+            "batch_size": 1,
+            "seg_length": 384
+        }
+    },
+    "config_compiletime_model": {
+        "aic_hw": "",
+        "aic_hw_version": "2.0",
+        "compile_only": "",
+        "cores": "1",
+        "deallocDelay": "3",
+        "device_id": "0",
+        "execute_nodes_in_fp16": "Add,Div,Erf,Softmax",
+        "mos": "1",
+        "multicast_weights": "",
+        "ols": "2",
+        "onnx_define_symbol": {
+            "batch_size": 1,
+            "seg_length": 384
+        },
+        "percentile_calibration_value": 99.9977,
+        "profiling_thread": 8,
+        "quantization_calibration": "Percentile",
+        "quantization_precision": "Int8",
+        "quantization_precision_bias": "Int32",
+        "quantization_schema_activations": "symmetric_with_uint8",
+        "quantization_schema_constants": "symmetric_with_uint8",
+        "size-split-granularity": "1536",
+        "size_split_granularity": "1536",
+        "vtcm_working_set_limit_ratio": "1",
+        "vvv": ""
+    },
+    "_parent_entries": [
+        [
+            "^",
+            "byname",
+            "GIGABYTE_R282-Z93"
+        ]
+    ],
+    "release": true,
+    "config_runtime": {
+        "device_id": "0,1,2,3,4,5,6,7",
+        "fan": 50,
+        "kilt_datasource_config": "0:16",
+        "kilt_device_config": "0,0,1,2,3:0,4,5,6,7:0,8,9,10,11:0,12,13,14,15:1,16,17,18,19:1,20,21,22,23:1,24,25,26,27:1,28,29,30,31",
+        "kilt_device_enqueue_yield_time": 100,
+        "kilt_device_scheduler_yield_time": 100,
+        "kilt_dispatch_yield_time": 100,
+        "kilt_scheduler_yield_time": 1000000,
+        "loadgen_batch_size": 4096,
+        "loadgen_buffer_size": 10833,
+        "loadgen_target_qps": 1,
+        "model_input_format": "UINT32,1,384:UINT32,1,8:UINT32,1,384:UINT32,1,384",
+        "model_output_format": "FLOAT32,1,384:FLOAT32,1,384",
+        "power_server_address": "10.222.146.209",
+        "power_server_port": 4957,
+        "recommended_activation_count": 16,
+        "recommended_batch_size": 4096,
+        "recommended_max_wait_abs": null,
+        "vc": 7
+    }
+}

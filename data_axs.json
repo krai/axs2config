@@ -1,0 +1,58 @@
+{
+    "_parent_entries": [
+        [
+            "^",
+            "core_collection"
+        ],
+        [
+            "^",
+            "byname",
+            "git"
+        ]
+    ],
+    "tags": [
+        "git_repo",
+        "collection"
+    ],
+    "repo_name": "axs2config",
+    "submodules": false,
+    "checkout": "main",
+    "contained_entries": {
+        "assembled_dl385_q8_std_0,1,2,3,4,5,6,7_for_bert-99_Offline": "assembled_dl385_q8_std_0,1,2,3,4,5,6,7_for_bert-99_Offline",
+        "assembled_dl385_q8_std_0,1,2,3,4,5,6,7_for_bert-99_Server": "assembled_dl385_q8_std_0,1,2,3,4,5,6,7_for_bert-99_Server",
+        "assembled_dl385_q8_std_0,1,2,3,4,5,6,7_for_bert-99.9_Offline": "assembled_dl385_q8_std_0,1,2,3,4,5,6,7_for_bert-99.9_Offline",
+        "assembled_dl385_q8_std_0,1,2,3,4,5,6,7_for_bert-99.9_Server": "assembled_dl385_q8_std_0,1,2,3,4,5,6,7_for_bert-99.9_Server",
+        "assembled_dl385_q8_std_0,1,2,3,4,5,6,7_for_resnet50_Offline": "assembled_dl385_q8_std_0,1,2,3,4,5,6,7_for_resnet50_Offline",
+        "assembled_dl385_q8_std_0,1,2,3,4,5,6,7_for_resnet50_Server": "assembled_dl385_q8_std_0,1,2,3,4,5,6,7_for_resnet50_Server",
+        "assembled_dl385_q8_std_0,1,2,3,4,5,6,7_for_retinanet_Offline": "assembled_dl385_q8_std_0,1,2,3,4,5,6,7_for_retinanet_Offline",
+        "assembled_dl385_q8_std_0,1,2,3,4,5,6,7_for_retinanet_Server": "assembled_dl385_q8_std_0,1,2,3,4,5,6,7_for_retinanet_Server",
+        "assembled_gen_qaic_profile_0_for_bert-99_Offline": "assembled_gen_qaic_profile_0_for_bert-99_Offline",
+        "assembled_gen_qaic_profile_0_for_bert-99_Server": "assembled_gen_qaic_profile_0_for_bert-99_Server",
+        "assembled_e920d_q4_std_0_for_bert-99_SingleStream": "assembled_e920d_q4_std_0_for_bert-99_SingleStream",
+        "assembled_e920d_q4_std_0,1,2,3_for_bert-99_Offline": "assembled_e920d_q4_std_0,1,2,3_for_bert-99_Offline",
+        "assembled_r282_z93_q8e_0,1,2,3,4,5,6,7_for_bert-99_Offline": "assembled_r282_z93_q8e_0,1,2,3,4,5,6,7_for_bert-99_Offline",
+        "assembled_r282_z93_q8e_0,1,2,3,4,5,6,7_for_bert-99_Server": "assembled_r282_z93_q8e_0,1,2,3,4,5,6,7_for_bert-99_Server",
+        "assembled_r282_z93_q8e_0,1,2,3,4,5,6,7_for_bert-99.9_Offline": "assembled_r282_z93_q8e_0,1,2,3,4,5,6,7_for_bert-99.9_Offline",
+        "assembled_r282_z93_q8e_0,1,2,3,4,5,6,7_for_bert-99.9_Server": "assembled_r282_z93_q8e_0,1,2,3,4,5,6,7_for_bert-99.9_Server",
+        "assembled_r282_z93_q8e_0,1,2,3,4,5,6,7_for_resnet50_Offline": "assembled_r282_z93_q8e_0,1,2,3,4,5,6,7_for_resnet50_Offline",
+        "assembled_r282_z93_q8e_0,1,2,3,4,5,6,7_for_resnet50_Server": "assembled_r282_z93_q8e_0,1,2,3,4,5,6,7_for_resnet50_Server",
+        "assembled_r282_z93_q8e_0,1,2,3,4,5,6,7_for_retinanet_Offline": "assembled_r282_z93_q8e_0,1,2,3,4,5,6,7_for_retinanet_Offline",
+        "assembled_r282_z93_q8e_0,1,2,3,4,5,6,7_for_retinanet_Server": "assembled_r282_z93_q8e_0,1,2,3,4,5,6,7_for_retinanet_Server",
+        "assembled_sr665_q5_pro_0,1,2,3,4_for_bert-99_Offline": "assembled_sr665_q5_pro_0,1,2,3,4_for_bert-99_Offline",
+        "assembled_sr665_q5_pro_0,1,2,3,4_for_bert-99_Server": "assembled_sr665_q5_pro_0,1,2,3,4_for_bert-99_Server",
+        "assembled_sr665_q5_pro_0,1,2,3,4_for_bert-99.9_Offline": "assembled_sr665_q5_pro_0,1,2,3,4_for_bert-99.9_Offline",
+        "assembled_sr665_q5_pro_0,1,2,3,4_for_bert-99.9_Server": "assembled_sr665_q5_pro_0,1,2,3,4_for_bert-99.9_Server",
+        "assembled_sr665_q5_pro_0,1,2,3,4_for_resnet50_Offline": "assembled_sr665_q5_pro_0,1,2,3,4_for_resnet50_Offline",
+        "assembled_sr665_q5_pro_0,1,2,3,4_for_resnet50_Server": "assembled_sr665_q5_pro_0,1,2,3,4_for_resnet50_Server",
+        "assembled_sr665_q5_pro_0,1,2,3,4_for_retinanet_Offline": "assembled_sr665_q5_pro_0,1,2,3,4_for_retinanet_Offline",
+        "assembled_sr665_q5_pro_0,1,2,3,4_for_retinanet_Server": "assembled_sr665_q5_pro_0,1,2,3,4_for_retinanet_Server",
+        "assembled_eb6-kilt-snpe_cpu_0_for_bert-99_SingleStream": "assembled_eb6-kilt-snpe_cpu_0_for_bert-99_SingleStream",
+        "assembled_eb6-kilt-snpe_cpu_0_for_bert-99_Offline": "assembled_eb6-kilt-snpe_cpu_0_for_bert-99_Offline",
+        "assembled_eb6-kilt-snpe_aip_0_for_bert-99_SingleStream": "assembled_eb6-kilt-snpe_aip_0_for_bert-99_SingleStream",
+        "assembled_eb6-kilt-snpe_aip_0_for_bert-99_Offline": "assembled_eb6-kilt-snpe_aip_0_for_bert-99_Offline",
+        "assembled_eb6-kilt-snpe_dsp_0_for_bert-99_SingleStream": "assembled_eb6-kilt-snpe_dsp_0_for_bert-99_SingleStream",
+        "assembled_eb6-kilt-snpe_dsp_0_for_bert-99_Offline": "assembled_eb6-kilt-snpe_dsp_0_for_bert-99_Offline",
+        "assembled_eb6-kilt-snpe_gpu_0_for_bert-99_SingleStream": "assembled_eb6-kilt-snpe_gpu_0_for_bert-99_SingleStream",
+        "assembled_eb6-kilt-snpe_gpu_0_for_bert-99_Offline": "assembled_eb6-kilt-snpe_gpu_0_for_bert-99_Offline",
+    }
+}

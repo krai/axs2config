@@ -1,0 +1,229 @@
+{
+    "sut": "e920d_q4_std",
+    "model": "bert-99",
+    "model_config_entry": [
+        "^",
+        "byname",
+        "bert-99"
+    ],
+    "model_compiletime_device_model_entry": [
+        "^",
+        "byname",
+        "compile_model_bert-99_q1_std_edge"
+    ],
+    "runtime_device_model_entry": [
+        "^",
+        "byname",
+        "run_bert-99_q4_std_edge"
+    ],
+    "loadgen_scenario": "Offline",
+    "num_device": 4,
+    "system": null,
+    "with_power": true,
+    "power_server_address": "10.222.146.194",
+    "power_server_port": 4955,
+    "power_max_amps": null,
+    "power_max_volts": null,
+    "profile_compiletime_device_model_entry": [
+        "^",
+        "byname",
+        "compile_profile_bert-99_q1_std_edge"
+    ],
+    "override_runtime_config": {
+        "resnet50": {
+            "Offline": {
+                "kilt_datasource_config": 0,
+                "kilt_device_config": "0,0,1,2,3:0,4,5,6,7:0,8,9,10,11:0,12,13,14,15",
+                "kilt_device_ringfence_driver": false,
+                "kilt_device_scheduler_yield_time": 100,
+                "kilt_device_enqueue_yield_time": 100,
+                "kilt_dispatch_yield_time": 100,
+                "kilt_scheduler_yield_time": 1000000,
+                "recommended_threads_per_queue": 2,
+                "recommended_queue_length": 3,
+                "loadgen_target_qps": 80000,
+                "vc": 16
+            },
+            "SingleStream": {
+                "kilt_datasource_config": 0,
+                "kilt_device_config": "0,0:0,8:0,16:0,24",
+                "kilt_device_ringfence_driver": false,
+                "recommended_threads_per_queue": 2,
+                "recommended_queue_length": 3,
+                "loadgen_target_latency": 0.4,
+                "vc": 17
+            },
+            "MultiStream": {
+                "device_id": "0+1+2+3",
+                "kilt_datasource_config": 0,
+                "kilt_device_config": "0,0:0,8:0,16:0,24",
+                "kilt_device_ringfence_driver": false,
+                "recommended_threads_per_queue": 2,
+                "recommended_queue_length": 3,
+                "loadgen_target_latency": 0.55,
+                "vc": 17
+            }
+        },
+        "retinanet": {
+            "Offline": {
+                "kilt_datasource_config": 0,
+                "kilt_device_config": "0,0,1,2,3:0,4,5,6,7:0,8,9,10,11:0,12,13,14,15",
+                "kilt_device_ringfence_driver": false,
+                "kilt_device_scheduler_yield_time": 100,
+                "kilt_device_enqueue_yield_time": 100,
+                "kilt_dispatch_yield_time": 100,
+                "kilt_scheduler_yield_time": 1000000,
+                "recommended_threads_per_queue": 2,
+                "recommended_queue_length": 2,
+                "loadgen_target_qps": 1170,
+                "vc": 15
+            },
+            "SingleStream": {
+                "kilt_datasource_config": 0,
+                "kilt_device_config": "0,0:0,8:0,16:0,24",
+                "kilt_device_ringfence_driver": false,
+                "recommended_threads_per_queue": 2,
+                "recommended_queue_length": 2,
+                "loadgen_target_latency": 12,
+                "vc": 17
+            },
+            "MultiStream": {
+                "device_id": "0+1+2+3",
+                "kilt_datasource_config": 0,
+                "kilt_device_config": "0,0:0,8:0,16:0,24",
+                "kilt_device_ringfence_driver": false,
+                "recommended_threads_per_queue": 2,
+                "recommended_queue_length": 1,
+                "loadgen_target_latency": 24,
+                "vc": 17
+            }
+        },
+        "bert-99": {
+            "Offline": {
+                "kilt_datasource_config": 0,
+                "kilt_device_config": "0,0,1,2,3:0,4,5,6,7:0,8,9,10,11:0,12,13,14,15",
+                "kilt_device_ringfence_driver": false,
+                "kilt_device_scheduler_yield_time": 100,
+                "kilt_device_enqueue_yield_time": 100,
+                "kilt_dispatch_yield_time": 100,
+                "kilt_scheduler_yield_time": 1000000,
+                "recommended_batch_size": 2000,
+                "recommended_threads_per_queue": 2,
+                "recommended_queue_length": 2,
+                "loadgen_target_qps": 2950,
+                "vc": 15
+            },
+            "SingleStream": {
+                "kilt_datasource_config": 0,
+                "kilt_device_config": "0,0:0,8:0,16:0,24",
+                "kilt_device_ringfence_driver": false,
+                "recommended_batch_size": 1,
+                "recommended_threads_per_queue": 2,
+                "recommended_queue_length": 2,
+                "loadgen_target_latency": 7.5,
+                "vc": 17
+            }
+        }
+    },
+    "gen_profile_config_only": false,
+    "device_id": "all",
+    "cpu_entry": null,
+    "system_entry": null,
+    "__cumulative_param_names": [
+        "__query",
+        "sut",
+        "model",
+        "loadgen_scenario",
+        "tags"
+    ],
+    "tags": [
+        "sut_config",
+        "sut=e920d_q4_std"
+    ],
+    "__query": "sut_config,sut=e920d_q4_std,model=bert-99,loadgen_scenario=Offline",
+    "_replay": [
+        "^^",
+        "execute",
+        [
+            [
+                [
+                    "get_kernel"
+                ],
+                [
+                    "byname",
+                    "e920d_q4_std"
+                ],
+                [
+                    "merge"
+                ]
+            ]
+        ]
+    ],
+    "config_compiletime_profile": {
+        "aic_hw": "",
+        "aic_hw_version": "2.0",
+        "device_id": "0",
+        "num_histogram_bins": 512,
+        "onnx_define_symbol": {
+            "batch_size": 1,
+            "seg_length": 384
+        },
+        "profiling_thread": 24
+    },
+    "config_compiletime_model": {
+        "aic_hw": "",
+        "aic_hw_version": "2.0",
+        "compile_only": "",
+        "cores": "1",
+        "deallocDelay": "3",
+        "device_id": "0",
+        "execute_nodes_in_fp16": "Add,Div,Erf,Softmax",
+        "mos": "1",
+        "multicast_weights": "",
+        "ols": "2",
+        "onnx_define_symbol": {
+            "batch_size": 1,
+            "seg_length": 384
+        },
+        "percentile_calibration_value": 99.9977,
+        "profiling_thread": 24,
+        "quantization_calibration": "Percentile",
+        "quantization_precision": "Int8",
+        "quantization_precision_bias": "Int32",
+        "quantization_schema_activations": "symmetric_with_uint8",
+        "quantization_schema_constants": "symmetric_with_uint8",
+        "size-split-granularity": "1536",
+        "size_split_granularity": "1536",
+        "vtcm_working_set_limit_ratio": "1",
+        "vvv": ""
+    },
+    "config_runtime": {
+        "device_id": "0,1,2,3",
+        "kilt_datasource_config": 0,
+        "kilt_device_config": "0,0,1,2,3:0,4,5,6,7:0,8,9,10,11:0,12,13,14,15",
+        "kilt_device_enqueue_yield_time": 100,
+        "kilt_device_ringfence_driver": false,
+        "kilt_device_scheduler_yield_time": 100,
+        "kilt_dispatch_yield_time": 100,
+        "kilt_scheduler_yield_time": 1000000,
+        "loadgen_buffer_size": 10833,
+        "loadgen_target_qps": 2950,
+        "model_input_format": "UINT32,1,384:UINT32,1,8:UINT32,1,384:UINT32,1,384",
+        "model_output_format": "FLOAT32,1,384:FLOAT32,1,384",
+        "power_server_address": "10.222.146.194",
+        "power_server_port": 4955,
+        "recommended_activation_count": 14,
+        "recommended_batch_size": 2000,
+        "recommended_max_wait_abs": null,
+        "recommended_queue_length": 2,
+        "recommended_threads_per_queue": 2,
+        "vc": 15
+    },
+    "_parent_entries": [
+        [
+            "^",
+            "byname",
+            "base_system"
+        ]
+    ]
+}

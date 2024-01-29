@@ -1,0 +1,232 @@
+{
+    "sut": "r282_z93_q8e",
+    "model": "resnet50",
+    "model_config_entry": [
+        "^",
+        "byname",
+        "resnet50"
+    ],
+    "model_compiletime_device_model_entry": [
+        "^",
+        "byname",
+        "compile_model_resnet50_q1_pro_dc"
+    ],
+    "runtime_device_model_entry": [
+        "^",
+        "byname",
+        "run_resnet50_q8_pro_dc"
+    ],
+    "loadgen_scenario": "Offline",
+    "num_device": 8,
+    "system": "GIGABYTE_R282-Z93",
+    "with_power": true,
+    "power_server_address": "10.222.146.209",
+    "power_server_port": 4957,
+    "power_max_amps": null,
+    "power_max_volts": null,
+    "profile_compiletime_device_model_entry": [
+        "^",
+        "byname",
+        "compile_profile_resnet50_q1_pro_dc"
+    ],
+    "override_runtime_config": {
+        "resnet50": {
+            "Offline": {
+                "kilt_datasource_config": "0:16",
+                "kilt_device_config": "0,0,1,2,3:0,4,5,6,7:0,8,9,10,11:0,12,13,14,15:1,16,17,18,19:1,20,21,22,23:1,24,25,26,27:1,28,29,30,31",
+                "kilt_device_scheduler_yield_time": 100,
+                "kilt_device_enqueue_yield_time": 100,
+                "kilt_dispatch_yield_time": 100,
+                "kilt_scheduler_yield_time": 1000000,
+                "recommended_threads_per_queue": 2,
+                "recommended_queue_length": 3,
+                "recommended_batch_size": 8,
+                "loadgen_target_qps": 169000,
+                "vc": 10,
+                "fan": 75
+            },
+            "Server": {
+                "kilt_datasource_config": "0:16",
+                "kilt_device_config": "0,0,1,2,3:0,4,5,6,7:0,8,9,10,11:0,12,13,14,15:1,16,17,18,19:1,20,21,22,23:1,24,25,26,27:1,28,29,30,31",
+                "kilt_device_scheduler_yield_time": 10,
+                "kilt_device_enqueue_yield_time": 10,
+                "kilt_dispatch_yield_time": 10,
+                "recommended_threads_per_queue": 2,
+                "recommended_queue_length": 3,
+                "recommended_batch_size": 8,
+                "recommended_max_wait_abs": 300,
+                "loadgen_target_qps": 148000,
+                "vc": 10,
+                "fan": 75
+            }
+        },
+        "retinanet": {
+            "Offline": {
+                "kilt_datasource_config": "0:16",
+                "kilt_device_config": "0,0,1,2,3:0,4,5,6,7:0,8,9,10,11:0,12,13,14,15:1,16,17,18,19:1,20,21,22,23:1,24,25,26,27:1,28,29,30,31",
+                "kilt_device_scheduler_yield_time": 100,
+                "kilt_device_enqueue_yield_time": 100,
+                "kilt_dispatch_yield_time": 100,
+                "kilt_scheduler_yield_time": 1000000,
+                "recommended_threads_per_queue": 2,
+                "recommended_queue_length": 2,
+                "recommended_batch_size": 1,
+                "loadgen_target_qps": 2000,
+                "vc": 7,
+                "fan": 50
+            },
+            "Server": {
+                "kilt_datasource_config": "0:16",
+                "kilt_device_config": "0,0,1,2,3:0,4,5,6,7:0,8,9,10,11:0,12,13,14,15:1,16,17,18,19:1,20,21,22,23:1,24,25,26,27:1,28,29,30,31",
+                "kilt_device_scheduler_yield_time": 10,
+                "kilt_device_enqueue_yield_time": 10,
+                "kilt_dispatch_yield_time": 10,
+                "recommended_threads_per_queue": 2,
+                "recommended_queue_length": 2,
+                "recommended_batch_size": 1,
+                "loadgen_target_qps": 1900,
+                "vc": 7,
+                "fan": 50
+            }
+        },
+        "bert-99": {
+            "Offline": {
+                "kilt_datasource_config": "0:16",
+                "kilt_device_config": "0,0,1,2,3:0,4,5,6,7:0,8,9,10,11:0,12,13,14,15:1,16,17,18,19:1,20,21,22,23:1,24,25,26,27:1,28,29,30,31",
+                "kilt_device_scheduler_yield_time": 100,
+                "kilt_device_enqueue_yield_time": 100,
+                "kilt_dispatch_yield_time": 100,
+                "kilt_scheduler_yield_time": 1000000,
+                "recommended_batch_size": 4096,
+                "loadgen_target_qps": 5000,
+                "vc": 7,
+                "fan": 50
+            },
+            "Server": {
+                "kilt_datasource_config": "0:16",
+                "kilt_device_config": "0,0,1,2,3:0,4,5,6,7:0,8,9,10,11:0,12,13,14,15:1,16,17,18,19:1,20,21,22,23:1,24,25,26,27:1,28,29,30,31",
+                "kilt_device_scheduler_yield_time": 10,
+                "kilt_device_enqueue_yield_time": 10,
+                "kilt_dispatch_yield_time": 10,
+                "recommended_batch_size": 200,
+                "recommended_max_wait_abs": 15000,
+                "loadgen_target_qps": 4800,
+                "vc": 7,
+                "fan": 50
+            }
+        },
+        "bert-99.9": {
+            "Offline": {
+                "kilt_datasource_config": "0:16",
+                "kilt_device_config": "0,0,1,2,3:0,4,5,6,7:0,8,9,10,11:0,12,13,14,15:1,16,17,18,19:1,20,21,22,23:1,24,25,26,27:1,28,29,30,31",
+                "kilt_device_scheduler_yield_time": 100,
+                "kilt_device_enqueue_yield_time": 100,
+                "kilt_dispatch_yield_time": 100,
+                "kilt_scheduler_yield_time": 1000000,
+                "recommended_batch_size": 4096,
+                "loadgen_target_qps": 2850,
+                "vc": 6,
+                "fan": 50
+            },
+            "Server": {
+                "kilt_datasource_config": "0:16",
+                "kilt_device_config": "0,0,1,2,3:0,4,5,6,7:0,8,9,10,11:0,12,13,14,15:1,16,17,18,19:1,20,21,22,23:1,24,25,26,27:1,28,29,30,31",
+                "kilt_device_scheduler_yield_time": 10,
+                "kilt_device_enqueue_yield_time": 10,
+                "kilt_dispatch_yield_time": 10,
+                "recommended_batch_size": 1024,
+                "recommended_max_wait_abs": 50000,
+                "loadgen_target_qps": 2750,
+                "vc": 7,
+                "fan": 75
+            }
+        }
+    },
+    "gen_profile_config_only": false,
+    "device_id": "all",
+    "cpu_entry": null,
+    "system_entry": null,
+    "__cumulative_param_names": [
+        "__query",
+        "sut",
+        "model",
+        "loadgen_scenario",
+        "tags"
+    ],
+    "__query": "sut_config,sut=r282_z93_q8e,model=resnet50,loadgen_scenario=Offline",
+    "tags": [
+        "sut_config",
+        "sut=r282_z93_q8e"
+    ],
+    "_replay": [
+        "^^",
+        "execute",
+        [
+            [
+                [
+                    "get_kernel"
+                ],
+                [
+                    "byname",
+                    "r282_z93_q8e"
+                ],
+                [
+                    "merge"
+                ]
+            ]
+        ]
+    ],
+    "config_compiletime_profile": {
+        "device_id": "0",
+        "output-node-name": "ArgMax",
+        "profiling_thread": 8
+    },
+    "config_compiletime_model": {
+        "aic_hw": "",
+        "aic_hw_version": "2.0",
+        "batchSize": 8,
+        "compile_only": "",
+        "cores": "4",
+        "device_id": "0",
+        "enable-channelwise": "",
+        "mos": "1,2",
+        "ols": "4",
+        "output-node-name": "ArgMax",
+        "quantization-schema-constants": "symmetric_with_uint8",
+        "quantization_precision": "Int8",
+        "quantization_schema_activations": "symmetric_with_uint8",
+        "sdp-cluster-sizes": "2,2",
+        "use-producer-dma": "1",
+        "vvv": ""
+    },
+    "config_runtime": {
+        "device_id": "0,1,2,3,4,5,6,7",
+        "fan": 75,
+        "kilt_datasource_config": "0:16",
+        "kilt_device_config": "0,0,1,2,3:0,4,5,6,7:0,8,9,10,11:0,12,13,14,15:1,16,17,18,19:1,20,21,22,23:1,24,25,26,27:1,28,29,30,31",
+        "kilt_device_enqueue_yield_time": 100,
+        "kilt_device_scheduler_yield_time": 100,
+        "kilt_dispatch_yield_time": 100,
+        "kilt_scheduler_yield_time": 1000000,
+        "loadgen_batch_size": 8,
+        "loadgen_buffer_size": 1024,
+        "loadgen_target_qps": 169000,
+        "model_input_format": "UINT8,1,224,224,3",
+        "model_output_format": "INT64,1",
+        "power_server_address": "10.222.146.209",
+        "power_server_port": 4957,
+        "recommended_activation_count": 3,
+        "recommended_batch_size": 8,
+        "recommended_max_wait_abs": 1800,
+        "recommended_queue_length": 3,
+        "recommended_threads_per_queue": 2,
+        "vc": 10
+    },
+    "_parent_entries": [
+        [
+            "^",
+            "byname",
+            "GIGABYTE_R282-Z93"
+        ]
+    ]
+}
